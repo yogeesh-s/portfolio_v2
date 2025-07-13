@@ -16,7 +16,7 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
         {/* Left: Made with love */}
         <p className="text-sm text-[var(--text-secondary)] text-center md:text-left">
-          Made with <span className="text-red-500">♥</span> by{' '}
+          Made with ❤️ by{' '}
           <span className="text-[var(--accent)] font-medium">Yogeesh</span>
         </p>
 
