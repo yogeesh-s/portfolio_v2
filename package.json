@@ -5,10 +5,9 @@
   "homepage": "https://yogeesh-s.github.io/portfolio_v2",
   "scripts": {
     "dev": "next dev --turbopack",
-    "export": "next export",
-    "predeploy": "npm run build && npm run export",
-    "deploy": "gh-pages -d out",
     "build": "next build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d out",
     "start": "next start",
     "lint": "next lint"
   },

@@ -2,6 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   images: {
+    unoptimized: true,
     domains: ['images.unsplash.com'],
   },
   output: 'export', // important for static export
