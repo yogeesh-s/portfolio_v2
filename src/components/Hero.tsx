@@ -4,7 +4,7 @@ import { useRef } from 'react';
 import { motion, useInView, Variants } from 'framer-motion';
 import Image from 'next/image';
 import Button from '@/components/Button';
-import Profilepic from '@/assets/profile.jpeg';
+import Profilepic from '@/assets/profile.png';
 import Typewriter from 'typewriter-effect';
 
 // Animation Variant for fade-up
@@ -54,7 +54,7 @@ export default function Hero() {
             initial="hidden"
             animate={inView ? 'visible' : 'hidden'}
             variants={fadeIn}
-            className="text-xl sm:text-2xl md:text-3xl font-semibold text-[var(--accent)] min-h-[40px] sm:h-[40px]"
+            className="text-xl sm:text-2xl md:text-3xl font-semibold text-[var(--accent)] min-h-[60px] sm:min-h-[40px]"
           >
             <Typewriter
               options={{
@@ -72,7 +72,6 @@ export default function Hero() {
               }}
             />
           </motion.div>
-
           <motion.p
             custom={3}
             initial="hidden"
