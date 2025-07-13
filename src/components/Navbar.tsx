@@ -100,7 +100,7 @@ export default function Navbar() {
       {/* Desktop CTA Button */}
       <div className="hidden md:block">
         <Button variant="primary" as="link" href="#contact">
-          Hire Me
+          Contact me
         </Button>
       </div>
 
