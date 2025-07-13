@@ -80,7 +80,7 @@ export default function Hero() {
             variants={fadeIn}
             className="text-[var(--text-secondary)] max-w-xl leading-relaxed"
           >
-            I'm a full-stack developer who builds performant and intuitive web applications.
+            I&apos;m a full-stack developer who builds performant and intuitive web applications.
             I specialize in React, Next.js, and modern frontend tools — backed by solid backend experience using Node.js, Django and REST APIs.
             I work confidently with AWS, Git workflows, Bitbucket, and CI/CD pipelines to ship high-quality products efficiently.
           </motion.p>
