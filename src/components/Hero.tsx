@@ -54,13 +54,13 @@ export default function Hero() {
             initial="hidden"
             animate={inView ? 'visible' : 'hidden'}
             variants={fadeIn}
-            className="text-xl sm:text-2xl md:text-3xl font-semibold text-[var(--accent)] h-[40px]"
+            className="text-xl sm:text-2xl md:text-3xl font-semibold text-[var(--accent)] min-h-[40px] sm:h-[40px]"
           >
             <Typewriter
               options={{
                 strings: [
                   'Frontend Developer',
-                  'UI/UX Enthusiast',
+                  'UI/UX Enthusiast', 
                   'Creative Coder',
                   'React & Tailwind Specialist',
                   'Performance Optimizer',
@@ -121,7 +121,7 @@ export default function Hero() {
           </motion.div>
         </div>
 
-        {/* Right: Profile + Triangle + Badge */}
+        {/* Right: Profile + Triangle + Badge comment */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.95 }}
