@@ -4,10 +4,10 @@ import { useRef } from 'react';
 import { motion, useInView, Variants } from 'framer-motion';
 import Image from 'next/image';
 import Button from '@/components/Button';
-import Profilepic from '@/assets/profile.png';
+import Profilepic from '@/assets/profile.jpeg';
 import Typewriter from 'typewriter-effect';
 
-// Animation Variant for fade-up
+// Animation Variant
 const fadeIn: Variants = {
   hidden: { opacity: 0, y: 20 },
   visible: (i: number = 1) => ({
@@ -31,13 +31,13 @@ export default function Hero() {
       ref={ref}
       className="relative w-full min-h-[100dvh] flex items-center justify-center overflow-hidden px-6 pt-[80px] sm:pt-[100px]"
     >
-      {/* Glow background */}
+      {/* Background glow */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute w-[600px] h-[600px] bg-[var(--accent)] opacity-20 blur-[180px] rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
       </div>
 
       <div className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-[65%_35%] items-center gap-12">
-        {/* Left: Text Section */}
+        {/* Left Content */}
         <div className="space-y-6">
           <motion.h1
             custom={1}
@@ -60,9 +60,9 @@ export default function Hero() {
               options={{
                 strings: [
                   'Frontend Developer',
-                  'UI/UX Enthusiast', 
+                  'Full-Stack Engineer',
                   'Creative Coder',
-                  'React & Tailwind Specialist',
+                  'React & Next.js Specialist',
                   'Performance Optimizer',
                 ],
                 autoStart: true,
@@ -72,6 +72,7 @@ export default function Hero() {
               }}
             />
           </motion.div>
+
           <motion.p
             custom={3}
             initial="hidden"
@@ -79,16 +80,18 @@ export default function Hero() {
             variants={fadeIn}
             className="text-[var(--text-secondary)] max-w-xl leading-relaxed"
           >
-            I&apos;m a passionate frontend developer who loves turning ideas into smooth, performant, and visually compelling interfaces. With a deep focus on accessibility, animations, and user-centric design — I build things that not only work, but feel right.
+            I'm a full-stack developer who builds performant and intuitive web applications.
+            I specialize in React, Next.js, and modern frontend tools — backed by solid backend experience using Node.js, Django and REST APIs.
+            I work confidently with AWS, Git workflows, Bitbucket, and CI/CD pipelines to ship high-quality products efficiently.
           </motion.p>
 
-          {/* Cards Grid */}
+          {/* Experience cards */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-[var(--text-secondary)] pt-2">
             {[
               '🚀 5+ Projects with advanced UI/UX animations',
               '🌐 Optimized websites for Lighthouse 95+ scores',
-              '📦 Built custom UI libraries and design tokens',
-              '📈 Passionate about clean code & performance',
+              '📦 Built reusable components & design systems',
+              '🔁 Experience with scalable backend APIs',
             ].map((text, i) => (
               <motion.div
                 key={i}
@@ -103,7 +106,7 @@ export default function Hero() {
             ))}
           </div>
 
-          {/* CTA Buttons */}
+          {/* CTA buttons + skill tags */}
           <motion.div
             custom={8}
             initial="hidden"
@@ -117,10 +120,43 @@ export default function Hero() {
             <Button variant="secondary" as="link" href="#contact">
               Contact Me
             </Button>
+
+            {/* Skills */}
+            <motion.div
+              custom={9}
+              initial="hidden"
+              animate={inView ? 'visible' : 'hidden'}
+              variants={fadeIn}
+              className="flex flex-wrap gap-3 pt-4"
+            >
+              {[
+                'React',
+                'Next.js',
+                'TypeScript',
+                'Tailwind CSS',
+                'Framer Motion',
+                'Node.js',
+                'Django',
+                'PostgreSQL',
+                'MongoDB',
+                'AWS',
+                'Git',
+                'CI/CD',
+                'Bitbucket',
+                "REST API"
+              ].map((skill, i) => (
+                <span
+                  key={i}
+                  className="px-3 py-1 text-xs font-medium rounded-full border border-[var(--border)] bg-[var(--surface)] text-[var(--text-secondary)] shadow-sm hover:scale-105 hover:shadow-md transition-all"
+                >
+                  {skill}
+                </span>
+              ))}
+            </motion.div>
           </motion.div>
         </div>
 
-        {/* Right: Profile + Triangle + Badge comment */}
+        {/* Right: Profile Picture */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.95 }}
@@ -163,7 +199,7 @@ export default function Hero() {
               />
             </svg>
 
-            <div className="relative z-10 w-[200px] h-[200px] rounded-full border-2 border-white/10 bg-white/5 overflow-hidden shadow-lg">
+            <div className="group relative z-10 w-[200px] h-[200px] rounded-full border-2 border-white/10 bg-white/5 overflow-hidden shadow-lg">
               <Image
                 src={Profilepic}
                 alt="Profile picture"
@@ -171,9 +207,10 @@ export default function Hero() {
                 height={200}
                 className="object-cover w-full h-full"
               />
+              <div className="absolute inset-0 bg-[var(--accent)] opacity-15 group-hover:opacity-25 mix-blend-color pointer-events-none transition-opacity duration-300" />
             </div>
 
-            {/* Left + Right Neon Lines */}
+            {/* Neon lines */}
             {[...Array(3)].map((_, i) => (
               <div
                 key={`left-${i}`}

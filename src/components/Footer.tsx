@@ -23,7 +23,7 @@ export default function Footer() {
         {/* Right: Social icons */}
         <div className="flex gap-5 text-[var(--text-secondary)]">
           <Link
-            href="https://github.com/yourusername"
+            href="https://github.com/yogeesh-s"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub"
@@ -32,7 +32,7 @@ export default function Footer() {
             <FaGithub size={18} />
           </Link>
           <Link
-            href="https://linkedin.com/in/yourusername"
+            href="https://linkedin.com/in/yogeesh-s"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
@@ -41,7 +41,7 @@ export default function Footer() {
             <FaLinkedin size={18} />
           </Link>
           <Link
-            href="https://x.com/yourusername"
+            href="https://x.com/yogeeshYu"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="X (Twitter)"
@@ -50,7 +50,7 @@ export default function Footer() {
             <FaXTwitter size={18} />
           </Link>
           <Link
-            href="mailto:you@example.com"
+            href="mailto:yogeesh.sryd@gmail.com"
             aria-label="Email"
             className="hover:text-[var(--accent)] transition"
           >

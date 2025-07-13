@@ -48,14 +48,11 @@ export default function Navbar() {
 
   return (
     <motion.header
-      initial={{ opacity: 0, y: -20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
-      className={clsx(
-        "fixed top-4 left-1/2 z-50 w-[95%] max-w-6xl -translate-x-1/2 bg-[var(--surface)]/80 backdrop-blur-md border border-[var(--border)] shadow-[inset_0_0_0_1px_rgba(255,255,255,0.05)] px-6 py-3 flex justify-between items-center transition-all duration-300",
-        menuOpen ? "rounded-t-xl rounded-b-none" : "rounded-xl"
-      )}
-    >
+  className={clsx(
+    "fixed top-4 left-1/2 z-50 w-[95%] max-w-6xl -translate-x-1/2 bg-[var(--surface)]/80 backdrop-blur-md border border-[var(--border)] shadow-[inset_0_0_0_1px_rgba(255,255,255,0.05)] px-6 py-3 flex justify-between items-center transition-all duration-300",
+    menuOpen ? "rounded-t-xl rounded-b-none" : "rounded-xl"
+  )}
+>
       {/* Logo */}
       <motion.div
         initial={{ opacity: 0, x: -10 }}

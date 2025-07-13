@@ -2,7 +2,7 @@
 
 import { useRef } from 'react';
 import { motion, useInView, Variants } from 'framer-motion';
-import { FaBolt, FaPalette, FaCode, FaUsers } from 'react-icons/fa';
+import { FaBolt, FaServer, FaCode, FaCogs } from 'react-icons/fa';
 import UniverseVisual from './UniverseVisual';
 
 const fadeIn: Variants = {
@@ -31,12 +31,12 @@ export default function About() {
       ref={sectionRef}
       className="relative w-full min-h-screen px-6 py-20 flex items-center justify-center bg-[var(--surface)]"
     >
-      {/* Decorative Gradient Circles */}
+      {/* Decorative Circles */}
       <div className="absolute top-10 right-10 w-36 h-36 rounded-full bg-[var(--accent)] opacity-20 blur-[100px] pointer-events-none z-0" />
       <div className="absolute bottom-10 left-10 w-28 h-28 rounded-full bg-[var(--accent)] opacity-20 blur-[100px] pointer-events-none z-0" />
 
       <div className="max-w-6xl w-full grid md:grid-cols-2 items-center gap-16 relative z-10">
-        {/* === Left Animated Content === */}
+        {/* Left Text */}
         <div className="space-y-6">
           <motion.h2
             custom={1}
@@ -55,10 +55,10 @@ export default function About() {
             variants={fadeIn}
             className="text-[var(--text-secondary)] text-base sm:text-lg leading-relaxed"
           >
-            I’m a frontend engineer focused on clean design systems, motion UX, and performant experiences. I love building UI that feels alive, clear, and fast.
+            I’m a full-stack developer who brings clean UI, fast performance, and strong backend architecture together.
+            I love building interfaces that are both technically solid and visually intuitive — whether it’s a dynamic frontend or a scalable backend.
           </motion.p>
 
-          {/* ✅ Extra paragraph */}
           <motion.p
             custom={2.5}
             initial="hidden"
@@ -66,7 +66,8 @@ export default function About() {
             variants={fadeIn}
             className="text-[var(--text-secondary)] text-base sm:text-lg leading-relaxed"
           >
-            With a strong understanding of accessibility and a designer’s eye for clarity, I aim to make web interfaces that feel intuitive and effortless.
+            I specialize in React, Next.js, Node.js, and Django — with hands-on experience in building REST APIs and working with databases like PostgreSQL and MongoDB.
+            From reusable components to backend services and deployment, I focus on delivering maintainable, production-ready code.
           </motion.p>
 
           <motion.div
@@ -79,19 +80,19 @@ export default function About() {
             {[
               {
                 icon: <FaBolt className="text-[var(--accent)] text-lg" />,
-                label: 'Fast UI with motion focus',
-              },
-              {
-                icon: <FaPalette className="text-[var(--accent)] text-lg" />,
-                label: 'Design + dev integration',
+                label: 'Performant, responsive UI',
               },
               {
                 icon: <FaCode className="text-[var(--accent)] text-lg" />,
-                label: 'Reusable React components',
+                label: 'Reusable components & clean code',
               },
               {
-                icon: <FaUsers className="text-[var(--accent)] text-lg" />,
-                label: 'Built for teams & scale',
+                icon: <FaServer className="text-[var(--accent)] text-lg" />,
+                label: 'REST API & backend development',
+              },
+              {
+                icon: <FaCogs className="text-[var(--accent)] text-lg" />,
+                label: 'Integrated Git, CI/CD & AWS flow',
               },
             ].map((item, i) => (
               <motion.div
@@ -109,7 +110,7 @@ export default function About() {
           </motion.div>
         </div>
 
-        {/* === Right Universe Visual === */}
+        {/* Right Visual */}
         <UniverseVisual isInView={isInView} />
       </div>
     </section>

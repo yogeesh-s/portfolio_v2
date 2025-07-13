@@ -4,25 +4,39 @@ import { motion } from 'framer-motion';
 
 const experiences = [
   {
-    company: 'TechFlow',
-    title: 'Frontend Developer',
-    period: '2023 - Present',
+    company: 'Efficient Capital Labs',
+    title: 'Software Engineer – Full Stack',
+    period: '2024 June – Present',
     description:
-      'Developed dynamic UI with React, Framer Motion, and Tailwind CSS. Collaborated on scalable design systems and optimized performance.',
+      'Leading full stack development of internal tools using React, Node.js, PostgreSQL, and AWS. Focused on scalable architecture, secure APIs, and team collaboration.',
   },
   {
-    company: 'DesignSpark',
-    title: 'UI/UX Engineer',
-    period: '2021 - 2023',
+    company: 'Efficient Capital Labs',
+    title: 'Full Stack Developer Intern',
+    period: '2023 Nov – 2023 Dec',
     description:
-      'Built accessible, visually expressive interfaces with smooth animations and Figma-based collaboration.',
+      'Built production features with React, Node.js, and PostgreSQL. Contributed to backend APIs, authentication, and performance optimizations in a fast-paced startup.',
   },
   {
-    company: 'WebHive',
-    title: 'Junior Developer',
-    period: '2020 - 2021',
+    company: 'ArcSolar',
+    title: 'Freelance Full Stack Developer (E-Commerce)',
+    period: '2022 – 2023',
     description:
-      'Gained strong frontend foundations through real-world client work with modern JavaScript and responsive design.',
+      'Developed and maintained a solar e-commerce platform using Next.js, MongoDB, and Tailwind CSS. Added product flows, admin panel, and handled deployment.',
+  },
+  {
+    company: 'Bus Travel Website',
+    title: 'Freelance Full Stack Developer',
+    period: '2021 – 2022',
+    description:
+      'Built a responsive travel booking website with React and Express. Integrated location-based search, payment gateways, and backend APIs for admin and users.',
+  },
+  {
+    company: 'Pooja Travels & Multiple Clients',
+    title: 'Freelance Developer & SEO Specialist',
+    period: '2019 – 2021',
+    description:
+      'Worked on WordPress websites, SEO optimization, Google Ads, and digital marketing strategies for small businesses. Delivered full-cycle websites and increased search visibility.',
   },
 ];
 
@@ -37,7 +51,7 @@ export default function Experience() {
       </h2>
 
       <div className="relative max-w-6xl mx-auto">
-        {/* Vertical line */}
+        {/* Timeline line */}
         <div className="absolute left-1/2 top-0 w-[2px] h-full bg-[var(--accent)]/30 -translate-x-1/2 z-0" />
 
         <div className="flex flex-col gap-16 relative z-10">
@@ -58,7 +72,7 @@ export default function Experience() {
                   viewport={{ once: true }}
                   className="relative w-full md:w-[calc(50%-32px)] bg-white/5 border border-white/10 p-6 rounded-xl backdrop-blur-md shadow-md hover:shadow-lg transition"
                 >
-                  {/* Dot */}
+                  {/* Timeline dot */}
                   <div
                     className="absolute top-6 md:top-1/2 md:-translate-y-1/2 w-4 h-4 rounded-full bg-[var(--accent)] border-2 border-white shadow-md z-10 hidden md:block"
                     style={{
@@ -86,7 +100,7 @@ export default function Experience() {
         </div>
       </div>
 
-      {/* Background glows */}
+      {/* Decorative glows */}
       <div className="absolute w-72 h-72 bg-[var(--accent)]/10 rounded-full blur-3xl -top-10 -left-20 z-0" />
       <div className="absolute w-96 h-96 bg-[var(--accent)]/10 rounded-full blur-3xl -bottom-20 -right-32 z-0" />
     </section>
