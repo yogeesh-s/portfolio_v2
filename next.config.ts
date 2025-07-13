@@ -5,8 +5,8 @@ const nextConfig: NextConfig = {
     unoptimized: true,
   },
   output: 'export',
-  basePath: '/portfolio_v2',
-  assetPrefix: '/portfolio_v2/',
+  basePath: process.env.ENV === 'dev' ? '' : '/portfolio_v2',
+  assetPrefix: process.env.ENV === 'dev' ? '' : '/portfolio_v2/',
   trailingSlash: true,
 };
 

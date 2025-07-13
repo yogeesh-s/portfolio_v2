@@ -13,13 +13,22 @@ export default function UniverseVisual({ isInView }: { isInView: boolean }) {
         "Building expressive, responsive, and motion-inspired web interfaces.",
     },
     {
-      title: "Interface Engineer",
+      title: "Interface Engineer", 
       description:
         "I bring designs to life using clean code, smooth animation, and scalable components.",
     },
   ];
 
-  // Switch content every 3s
+  const sizes = {
+    sm: [160, 220, 280], 
+    md: [180, 240, 300]
+  };
+
+  const radiusSizes = {
+    sm: [170, 230, 290],
+    md: [190, 250, 310],
+  };
+
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % content.length);
@@ -34,9 +43,8 @@ export default function UniverseVisual({ isInView }: { isInView: boolean }) {
         isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.95 }
       }
       transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-      className="relative w-full h-[440px] flex items-center justify-center"
+      className="relative w-full min-w-[320px] h-[440px] flex items-center justify-center overflow-x-hidden"
     >
-      {/* Center Glow */}
       <motion.div
         animate={{
           scale: [1, 1.15, 1],
@@ -47,20 +55,26 @@ export default function UniverseVisual({ isInView }: { isInView: boolean }) {
           repeat: Infinity,
           ease: "easeInOut",
         }}
-        className="absolute w-40 h-40 rounded-full bg-[var(--accent)] blur-2xl opacity-30"
+        className="absolute w-32 h-32 sm:w-40 sm:h-40 rounded-full bg-[var(--accent)] blur-2xl opacity-30"
       />
 
-      {/* Orbit Rings */}
-      {[200, 270, 340].map((size, index) => (
+      {sizes.sm.map((size, index) => (
         <div
           key={index}
-          className="absolute border border-[var(--accent)]/20 rounded-full"
+          className="absolute border border-[var(--accent)]/20 rounded-full md:hidden"
           style={{ width: size, height: size }}
         />
       ))}
 
-      {/* Orbiting Dots */}
-      {[210, 280, 350].map((radius, i) => (
+      {sizes.md.map((size, index) => (
+        <div
+          key={`md-${index}`}
+          className="absolute hidden md:block border border-[var(--accent)]/20 rounded-full"
+          style={{ width: size, height: size }}
+        />
+      ))}
+
+      {radiusSizes.sm.map((radius, i) => (
         <motion.div
           key={i}
           animate={{ rotate: 360 }}
@@ -69,19 +83,39 @@ export default function UniverseVisual({ isInView }: { isInView: boolean }) {
             repeat: Infinity,
             ease: "linear",
           }}
-          className="absolute"
+          className="absolute md:hidden"
           style={{
             width: `${radius}px`,
             height: `${radius}px`,
           }}
         >
           <div className="w-full h-full relative">
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3 h-3 bg-[var(--accent)] rounded-full shadow-md" />
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-2 h-2 sm:w-3 sm:h-3 bg-[var(--accent)] rounded-full shadow-md" />
           </div>
         </motion.div>
       ))}
 
-      {/* Animated Content Switcher */}
+      {radiusSizes.md.map((radius, i) => (
+        <motion.div
+          key={`md-${i}`}
+          animate={{ rotate: 360 }}
+          transition={{
+            duration: 10 + i * 2,
+            repeat: Infinity,
+            ease: "linear",
+          }}
+          className="absolute hidden md:block"
+          style={{
+            width: `${radius}px`,
+            height: `${radius}px`,
+          }}
+        >
+          <div className="w-full h-full relative">
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-2 h-2 sm:w-3 sm:h-3 bg-[var(--accent)] rounded-full shadow-md" />
+          </div>
+        </motion.div>
+      ))}
+
       <AnimatePresence mode="wait">
         <motion.div
           key={index}
@@ -89,7 +123,7 @@ export default function UniverseVisual({ isInView }: { isInView: boolean }) {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -10 }}
           transition={{ duration: 0.6 }}
-          className="absolute text-center px-4 max-w-[280px] sm:max-w-xs md:max-w-sm lg:max-w-md"
+          className="absolute text-center px-4 w-[280px] sm:w-auto sm:max-w-xs md:max-w-sm lg:max-w-md"
         >
           <div className="text-xl font-bold text-[var(--text)]">
             {content[index].title}
