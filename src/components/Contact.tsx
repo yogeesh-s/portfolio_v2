@@ -7,7 +7,6 @@ import {
   FaEnvelope,
   FaLinkedin,
   FaMapMarkerAlt,
-  FaPhoneAlt,
 } from "react-icons/fa";
 
 const initialForm = { name: "", email: "", message: "" };
