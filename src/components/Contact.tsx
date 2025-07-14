@@ -162,14 +162,6 @@ export default function Contact() {
             yogeesh.sryd@gmail.com
           </a>
 
-          <a
-            href="tel:+1234567890"
-            className="flex items-center gap-2 text-sm text-[var(--text-secondary)] hover:text-[var(--accent)] transition"
-            aria-label="Phone"
-          >
-            <FaPhoneAlt className="text-[var(--accent)]" />
-            +91 86606 39268
-          </a>
 
           <div className="flex items-center gap-2 text-sm text-[var(--text-secondary)]">
             <FaMapMarkerAlt className="text-[var(--accent)]" />
