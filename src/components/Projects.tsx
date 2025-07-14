@@ -14,6 +14,16 @@ type Project = {
 
 const projects: Project[] = [
   {
+    title: 'Portfolio Website',
+    description:
+      'Personal portfolio showcasing projects and blog posts.',
+    image:
+      'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=800&h=600&fit=crop',
+    techs: ['Next.js', 'React', 'Tailwind', 'Framer Motion'],
+    demoUrl: 'https://github.com/yogeesh-s/portfolio',
+    repoUrl: 'https://github.com/yogeesh-s/portfolio',
+  },
+  {
     title: 'College Staff Data Management',
     description:
       'System for staff data entry, dynamic reports & analysis using PHP, MySQL & JS.',
@@ -69,16 +79,6 @@ const projects: Project[] = [
     image:
       'https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=600&fit=crop',
     techs: ['Arduino', 'Raspberry Pi', 'MQTT'],
-  },
-  {
-    title: 'Portfolio Website',
-    description:
-      'Personal portfolio showcasing projects and blog posts.',
-    image:
-      'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=800&h=600&fit=crop',
-    techs: ['Next.js', 'React', 'Tailwind', 'Framer Motion'],
-    demoUrl: 'https://github.com/yogeesh-s',
-    repoUrl: 'https://github.com/yogeesh-s/portfolio_v2',
   },
   {
     title: 'SGPA Calculator',

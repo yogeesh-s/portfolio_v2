@@ -8,15 +8,15 @@ const experiences = [
     title: 'Software Engineer – Full Stack',
     period: '2024 June – Present',
     description:
-      'Leading full stack development of internal tools using React, Node.js, PostgreSQL, and AWS. Focused on scalable architecture, secure APIs, and team collaboration.',
+      'Leading full stack development of internal tools using React, Next.js, Django, PostgreSQL, and AWS. Focused on scalable architecture, secure APIs, and team collaboration.',
   },
   {
     company: 'Efficient Capital Labs',
     title: 'Full Stack Developer Intern',
     period: '2023 Nov – 2023 Dec',
     description:
-      'Built production features with React, Node.js, and PostgreSQL. Contributed to backend APIs, authentication, and performance optimizations in a fast-paced startup.',
-  },
+      "Built production features with PHP, HTML, CSS, JavaScript, and MySQL. Contributed to frontend development, responsive design, database optimization, and server-side functionality in a fast-paced startup."  
+    },
   {
     company: 'ArcSolar',
     title: 'Freelance Full Stack Developer (E-Commerce)',
