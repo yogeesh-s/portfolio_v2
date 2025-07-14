@@ -15,7 +15,7 @@ const experiences = [
     title: 'Full Stack Developer Intern',
     period: '2023 Nov – 2023 Dec',
     description:
-      "Built production features with PHP, HTML, CSS, JavaScript, and MySQL. Contributed to frontend development, responsive design, database optimization, and server-side functionality in a fast-paced startup."  
+      "Built a project using PHP, HTML, CSS, JavaScript, and MySQL. Contributed to frontend development, responsive design, database optimization, and server-side functionality in a fast-paced startup."
     },
   {
     company: 'ArcSolar',
